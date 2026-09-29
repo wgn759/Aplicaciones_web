@@ -1,0 +1,150 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #555;
+    min-height: 100dvh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* contenedor principal */
+.contenedor {
+    background: #ddd;
+    width: 100%;
+    max-width: 550px;
+    padding: 35px 40px;
+    border-radius: 15px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    font-size: 26px;
+    margin-bottom: 8px;
+}
+
+.subtitulo {
+    text-align: center;
+    color: #777;
+    font-size: 14px;
+    margin-bottom: 25px;
+}
+
+/* campos del formulario*/
+.campo {
+    margin-bottom: 18px;
+}
+
+.campo label {
+    font-weight: 600;
+    color: #444;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.campo input {
+    width: 100%;
+    padding: 11px 14px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    font-size: 14px;
+    transition: all 0.3s ease;
+    outline: none;
+}
+
+.campo input:focus {
+    border-color: #667eea;
+   
+}
+
+/* Estados de validación */
+.campo input.valido {
+    border-color: #28a745;
+    background-color: #f0fff4;
+}
+
+.campo input.invalido {
+    border-color: #dc3545;
+    background-color: #fff5f5;
+}
+
+/* Mensajes de error */
+.error {
+    display: block;
+    color: #dc3545;
+    font-size: 12.5px;
+    margin-top: 5px;
+    min-height: 16px;
+    font-weight: 500;
+}
+
+/* Botones */
+.botones {
+    display: flex;
+    gap: 12px;
+    margin-top: 22px;
+}
+
+button {
+    flex: 1;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn-guardar {
+    background-color:#777;
+    color: white;
+}
+
+.btn-guardar:hover {
+    transform: translateY(-2px);
+    box-shadow: 6px 4px 10px #222;
+}
+
+.btn-limpiar {
+    background-color:#777;
+    color: white;
+}
+
+.btn-limpiar:hover {
+    background: #555;
+}
+
+/*  Mensaje de éxito */
+.exito {
+    margin-top: 20px;
+    padding: 14px;
+    background: #d4edda;
+    color: #155724;
+    border: 1px solid #c3e6cb;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 600;
+    animation: aparecer 0.4s ease;
+}
+
+.oculto {
+    display: none;
+}
+
+
+/* ===== Responsive ===== */
+@media (max-width: 480px) {
+    .contenedor {
+        padding: 25px 20px;
+    }
+    h1 { font-size: 22px; }
+}

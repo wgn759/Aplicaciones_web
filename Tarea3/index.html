@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro de Clientes</title>
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+    <div class="contenedor">
+        <h1>Registro de Clientes</h1>
+        <p class="subtitulo">Complete todos los campos del formulario</p>
+
+        <form id="formCliente" novalidate>
+            <!-- cedula -->
+            <div class="campo">
+                <label for="cedula">Cédula (10 dígitos):</label>
+                <input type="text" id="cedula" name="cedula" maxlength="10" 
+                       placeholder="Ej: 1712345678" autocomplete="off">
+                <span class="error" id="errorCedula"></span>
+            </div>
+
+            <!-- NOMBRE -->
+            <div class="campo">
+                <label for="nombre">Nombre (máx. 30 caracteres):</label>
+                <input type="text" id="nombre" name="nombre" maxlength="30" 
+                       placeholder="Ej: Juan Pérez Gómez" autocomplete="off">
+                <span class="error" id="errorNombre"></span>
+            </div>
+
+            <!-- direcion -->
+            <div class="campo">
+                <label for="direccion">Dirección (máx. 50 caracteres):</label>
+                <input type="text" id="direccion" name="direccion" maxlength="50" 
+                       placeholder="Ej: Av. Amazonas N32-100 y Colón" autocomplete="off">
+                <span class="error" id="errorDireccion"></span>
+            </div>
+
+            <!-- telefono celular -->
+            <div class="campo">
+                <label for="telefono">Teléfono Celular (10 dígitos):</label>
+                <input type="text" id="telefono" name="telefono" maxlength="10" 
+                       placeholder="Ej: 0991234567" autocomplete="off">
+                <span class="error" id="errorTelefono"></span>
+            </div>
+
+            <!-- Correo electronico -->
+            <div class="campo">
+                <label for="correo">Correo Electrónico:</label>
+                <input type="email" id="correo" name="correo" 
+                       placeholder="Ej: cliente@correo.com" autocomplete="off">
+                <span class="error" id="errorCorreo"></span>
+            </div>
+
+            <!-- botones -->
+            <div class="botones">
+                <button type="submit" class="btn-guardar">Guardar</button>
+                <button type="reset" class="btn-limpiar" id="btnLimpiar">Limpiar</button>
+            </div>
+        </form>
+
+        <!-- Mensaje de exito -->
+        <div id="mensajeExito" class="exito oculto"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
